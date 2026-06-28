@@ -1,2 +1,3 @@
-$largest = dir -r | Sort-Object Length -Descending | Select-Object -First 10 | Format-Table -Property DirectoryName, Name, Length;
-Write-Host($largest)
+$directory = "C:\users\nikhi\OneDrive"
+$top10LargestFiles = dir -r $directory | Sort-Object Length -Descending | Select-Object -First 10 | Format-Table -Property DirectoryName, Name, Length;
+Write-Host($top10LargestFiles)
